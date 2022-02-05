@@ -1,0 +1,49 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="{{ asset('images/mylogo.png') }}">
+        </a>
+        <button class="navbar-toggler" 
+        		type="button" 
+        		data-toggle="collapse" 
+        		data-target="#navbarSupportedContent" 
+        		aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        	<span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Recherche <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inscription gratuite</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"
+                        href="#" id="navbarDropdown" 
+                        role="button" data-toggle="dropdown" 
+                        aria-haspopup="true" aria-expanded="false">
+                        Plus
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            	<div class="form-group">
+                	<input class="form-control mr-sm-2 input-small" type="text" placeholder="Pseudo" aria-label="Pseudo">
+            	</div>
+            	<div class="form-group">
+                	<input class="form-control mr-sm-2 input-small" type="password" placeholder="Mot de passe" aria-label="Mot de passe">
+            	</div>
+                <button class="btn my-2 my-sm-0 button-small" type="submit">Connexion</button>
+            </form>
+        </div>
+    </div>
+</nav>

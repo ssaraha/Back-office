@@ -1,0 +1,39 @@
+@import "~bootstrap";
+
+body {
+    /*background-color: lightgray;*/
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    /*color: #51265a;*/
+    background-color: #fafafa;
+}
+
+.input-small {
+    height: 30px !important;
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    border-radius: 3px !important;
+}
+
+.button-small {
+    height: 30px !important;
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+    background-color: #F815CB !important;
+    color: #ffffff !important;
+}
+
+.left-side {
+    min-height: 20px;
+    padding: 19px;
+    /*margin-bottom: 20px;*/
+    background-color: #f7ebf7;
+    border: 1px solid #edd1ed;
+    border-radius: 4px;
+}
+
+.bg-gray {
+        background-color: #E8DFF0;
+}

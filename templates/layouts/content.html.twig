@@ -1,0 +1,11 @@
+<div class="row mt-3 ">
+        <div class="col-md-9 left-side" >
+            <h2 class="text-muted text-center">{{ title }}</h2>
+            <div class="content">
+                {% if app.request.attributes.get('_route') == "app_home" %}
+                    {% include './home/content_home.html.twig' with {'searchLoveForm' : searchLoveForm } %}
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-md-3" style="border: 1px solid red;">Boy</div>
+</div>

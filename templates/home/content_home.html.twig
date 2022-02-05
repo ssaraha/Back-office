@@ -1,0 +1,25 @@
+<div class="row">
+	<div class="col-md-4 bg-gray pt-3 pb-3 mr-2 border rounded">
+		<h5 class="text-muted text-left">Trouver l'amour</h5>
+		<div class=" border-secondary">
+			{{ form_start(searchLoveForm) }}
+				{{ form_row(searchLoveForm.my_gender, {'attr': {'class': 'input-small'}} ) }}
+				{{ form_row(searchLoveForm.find_gender, {'attr': {'class': 'input-small'}} ) }}
+				{{ form_row(searchLoveForm.country, {'attr': {'class': 'input-small'}} ) }}
+				<input type="submit" value="Je trouve" class="btn btn-sm btn-block btn-success">
+			{{ form_end(searchLoveForm) }}
+		</div>
+	</div>
+	<div class="col-md-4 bg-gray pt-3 pb-3 border rounded mr-2">
+		<h5 class="text-muted text-left">Inscription gratuite</h5>
+		<div class=" border-secondary">
+			{{ form_start(freeRegisterForm) }}
+				{{ form_row(freeRegisterForm.my_gender, {'attr': {'class': 'input-small'}} ) }}
+				{{ form_row(freeRegisterForm.email, {'attr': {'class': 'input-small'}} ) }}
+				{{ form_row(freeRegisterForm.find_gender, {'attr': {'class': 'input-small'}} ) }}
+				<input type="submit" value="Je m'inscrit" class="btn btn-sm btn-block btn-success">
+			{{ form_end(freeRegisterForm) }}
+		</div>
+	</div>
+	<div class="col-md-4">Connectez-vous</div>
+</div>
