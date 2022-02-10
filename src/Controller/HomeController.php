@@ -22,6 +22,11 @@ class HomeController extends AbstractController
      */
     public function index(Request $request, AuthenticationUtils $authenticationUtils): Response
     {
+        //Login form
+        if ($this->getUser()) {
+            $this->addFlash('warning', 'Vous êtes déjà connecté');
+            return $this->redirectToRoute('app_welcome');
+        }
         //Form search love
         $searchLove = new SearchLove;
         $searchLoveForm = $this->createForm(SearchLoveForm::class, $searchLove);
@@ -40,10 +45,6 @@ class HomeController extends AbstractController
            dd($freeRegisterForm->getData()); 
         }
 
-        //Login form
-        // if ($this->getUser()) {
-        //     return $this->redirectToRoute('target_path');
-        // }
 
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
