@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-md-4 bg-gray pt-3 pb-3 mr-2 border rounded">
+	<div class="col-md-4 bg-gray pt-3 pb-3 mr-1 border rounded my_col">
 		<h5 class="text-muted text-left">Trouver l'amour</h5>
 		<div class=" border-secondary">
 			{{ form_start(searchLoveForm) }}
@@ -10,7 +10,7 @@
 			{{ form_end(searchLoveForm) }}
 		</div>
 	</div>
-	<div class="col-md-4 bg-gray pt-3 pb-3 border rounded mr-2">
+	<div class="col-md-4 bg-gray mr-1 pt-3 pb-3 border rounded my_col">
 		<h5 class="text-muted text-left">Inscription gratuite</h5>
 		<div class=" border-secondary">
 			{{ form_start(freeRegisterForm) }}
@@ -21,5 +21,58 @@
 			{{ form_end(freeRegisterForm) }}
 		</div>
 	</div>
-	<div class="col-md-4">Connectez-vous</div>
+	<div class="col-md-4 bg-gray pt-3 pb-3 border rounded my_col">
+		<h5 class="text-muted text-left">Se connecter</h5>
+		<form method="post" novalidate>
+		    {% if error %}
+		        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+		    {% endif %}
+
+		    {% if app.user %}
+		        <div class="mb-3">
+		            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+		        </div>
+		    {% endif %}
+
+		    {#<label for="inputEmail">Email</label>#}
+		    <div class="form-group">
+			    <input type="email" value="{{ last_username }}" 
+			    	   name="email" id="inputEmail" placeholder="Email" 
+			    	   class="form-control input-small"
+			    	   autocomplete="email" required autofocus>
+		    </div>
+		    {#<label for="inputPassword">Password</label>#}
+		    <div class="form-group">
+		    <input type="password" name="password" placeholder="Mot de passe" 
+		    	   id="inputPassword" class="form-control input-small" 
+		    	   autocomplete="current-password" required>
+		    </div>
+
+		    <input type="hidden" name="_csrf_token"
+		           value="{{ csrf_token('authenticate') }}"
+		    >
+
+		    
+	        {#Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+	        See https://symfony.com/doc/current/security/remember_me.html#}
+	        <div class="form-group">
+                <div class="d-flex justify-content-between">
+                    <div class="form-check">
+                        <input type="checkbox" 
+                            class="form-check-input"
+                            id="remember_me"
+                            name="_remember_me">
+                        <label class="form-check-label text-muted" for="_remember_me">Souviens de moi</label>
+                    </div>
+                    <a href="#" class="">Passe oublié</a>
+                </div>
+            </div>
+		    
+		    <div class="form-group mt-2 div-cnx">
+			    <button class="btn btn-success btn-sm btn-block" type="submit">
+			        Se connecter
+			    </button>
+		    </div>
+		</form>
+	</div>
 </div>

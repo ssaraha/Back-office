@@ -37,3 +37,35 @@ body {
 .bg-gray {
         background-color: #E8DFF0;
 }
+
+.my_col {
+    flex: 0 0 32.333333% !important;
+}
+
+.div-cnx {
+    margin-top: 26px !important;
+}
+
+.alert {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+
+    &.alert-success {
+    background-color: green;
+    }
+    &.alert-error {
+        background-color: red;
+    }
+
+    &.alert-info {
+        background-color: blue;
+    }
+    &.alert-warning {
+        background-color: orange;
+    }
+
+}
